@@ -10,5 +10,5 @@ sudo yum install ffmpeg ffmpeg-devel -y
 测试是否安装成功
 
 ffmpeg
-
+#需要安装python3的pip sudo yum install python3-pip
 pip3 install you-get
