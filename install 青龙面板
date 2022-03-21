@@ -49,5 +49,10 @@ Linux下
 bizCode
 bizMsg  
 lxml
+#添加依赖后需要执行一次修复依赖的脚本 执行后禁用
+ql raw https://raw.githubusercontent.com/spiritLHL/qinglong_auto_tools/master/scripts_check_dependence.py
 
+
+
+#参考学习链接    https://blog.csdn.net/Sean_Asu/article/details/121695651
 
