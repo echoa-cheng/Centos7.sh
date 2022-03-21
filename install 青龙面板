@@ -14,3 +14,40 @@ docker run -dit \
    --hostname qinglong \
    --restart always \
    whyour/qinglong:latest
+#添加依赖 自动拆分拆分
+NodeJs下
+ 
+crypto-js  
+prettytable
+dotenv  
+jsdom
+date-fns  
+tough-cookie  
+tslib
+ws@7.4.3  
+ts-md5  
+jsdom -g  
+jieba  
+fs
+form-data  
+json5  
+global-agent  
+png-js  
+@types/node  
+require
+typescript  
+js-base64  
+axios  
+
+Python3下
+requests
+canvas  
+ping3
+jieba
+
+Linux下
+bizCode
+bizMsg  
+lxml
+
+
