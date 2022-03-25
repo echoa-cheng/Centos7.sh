@@ -1,0 +1,44 @@
+安装依赖
+yum install libaio wget -y
+ 
+检查MYSQL是否已安装
+yum list installed | grep mysql
+
+如果有先卸载
+# 格式 yum -y remove [包名]
+yum -y remove mysql-libs.x86_64
+ 
+下载MySQL官网的仓库文件
+cd /tmp
+wget http://repo.mysql.com/mysql80-community-release-el7-1.noarch.rpm
+yum localinstall mysql80-community-release-el7-1.noarch.rpm
+ 
+验证仓库是否添加成功
+yum repolist enabled | grep "mysql.*-community.*"
+
+下载安装
+sudo yum install mysql-server --nogpgcheck
+
+执行
+
+rpm -qi mysql-community-server.x86_64 0:8.0.16-2.el7
+然后
+
+whereis mysql
+可以看到MySQL 的安装目录是 /usr/bin/
+
+启动服务
+systemctl start mysqld
+systemctl enable mysqld
+systemctl status mysqld
+
+#mysql的默认密码是空，首次进入后请设置密码
+ALTER USER 'root'@'localhost' IDENTIFIED BY '你的密码';
+#打开远程访问
+grant all privileges on *.* to 'root'@'%' identified by '123456';
+#就可以给所有ip都设定root登陆了。
+#如果授权成功，会有Query OK的提示。
+#然后：
+flush privileges;
+#这个是刷新授权的意思，如果没有这句话，授权可能无法立刻生效。
+#exit;
